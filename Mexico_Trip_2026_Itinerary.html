@@ -16,6 +16,7 @@
     --oaxaca:#2EAE72;--oaxaca-dark:#1B6B4A;--oaxaca-light:#142a1f;
     --pe:#3A9EC2;--pe-dark:#1A6B8A;--pe-light:#14252e;
     --fun:#1a1a2a;--link:#60A5FA;
+    --green-420:#5cb85c;
   }
   body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased}
   h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:700;line-height:1.2;color:var(--text-bright)}
@@ -35,6 +36,7 @@
   .hero-eyebrow{font-family:'Inter',sans-serif;font-size:0.75em;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
   .hero h1{font-size:clamp(3em,8vw,5.5em);font-weight:700;margin-bottom:12px;letter-spacing:-1px}
   .hero .tagline{font-family:'Cormorant Garamond',serif;font-size:clamp(1.2em,3vw,1.6em);font-style:italic;font-weight:400;opacity:0.85;margin-bottom:32px}
+  .hero .crew-names{font-family:'Inter',sans-serif;font-size:0.85em;font-weight:400;letter-spacing:2px;text-transform:uppercase;color:rgba(201,169,110,0.7);margin-bottom:28px}
   .hero-dates{display:inline-block;padding:14px 32px;border:1px solid rgba(201,169,110,0.4);border-radius:40px;font-size:0.85em;font-weight:500;letter-spacing:1.5px;color:var(--gold)}
   .hero-scroll{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.3);font-size:0.75em;letter-spacing:2px;text-transform:uppercase;z-index:2}
   .hero-scroll::after{content:'';display:block;width:1px;height:40px;background:rgba(201,169,110,0.2);margin:12px auto 0}
@@ -85,7 +87,55 @@
   .fun-fact::before{content:'FUN FACT';font-family:'Inter',sans-serif;font-size:0.65em;font-weight:700;letter-spacing:2px;color:var(--gold-dark);display:block;margin-bottom:4px}
   .fun-fact em{font-family:'Cormorant Garamond',serif;font-size:1.05em}
 
-  /* CITY SECTIONS */
+  /* BOURDAIN BADGE */
+  .bourdain-badge{
+    display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#2a1a0a,#1a1a2a);
+    border:1px solid #C9A96E;border-radius:20px;padding:4px 12px;font-size:0.72em;
+    font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-left:6px;
+    font-family:'Inter',sans-serif;
+  }
+  .bourdain-badge::before{content:'🔪'}
+
+  /* 420 BOX */
+  .four20-box{
+    background:linear-gradient(135deg,#0a1a0a,#1a2a1a);border-radius:14px;padding:20px 24px;
+    margin:16px 0;border:1px solid rgba(92,184,92,0.3);
+  }
+  .four20-box h4{color:var(--green-420);font-family:'Cormorant Garamond',serif;font-size:1.15em;margin-bottom:8px}
+  .four20-box h4::before{content:'🌿 '}
+  .four20-box p{font-size:0.88em;opacity:0.9}
+  .four20-box a{color:var(--green-420);text-decoration:none;border-bottom:1px solid rgba(92,184,92,0.4)}
+
+  /* SCOOTER BOX */
+  .scooter-box{
+    background:linear-gradient(135deg,#1a1520,#0a1a2a);border-radius:14px;padding:20px 24px;
+    margin:16px 0;border:1px solid rgba(155,89,182,0.3);
+  }
+  .scooter-box h4{color:#BB86FC;font-family:'Cormorant Garamond',serif;font-size:1.15em;margin-bottom:8px}
+  .scooter-box h4::before{content:'🛵 '}
+  .scooter-box p{font-size:0.88em;opacity:0.9}
+  .scooter-box a{color:#BB86FC;text-decoration:none;border-bottom:1px solid rgba(155,89,182,0.4)}
+
+  /* CITY SECTIONS — TEXTURED BACKGROUNDS */
+  .city-section-cdmx{
+    background:
+      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30z' fill='none' stroke='rgba(212,101,74,0.04)' stroke-width='1'/%3E%3C/svg%3E") repeat,
+      linear-gradient(180deg, var(--bg) 0%, rgba(42,24,21,0.15) 50%, var(--bg) 100%);
+    padding:20px 0;border-radius:0;
+  }
+  .city-section-oaxaca{
+    background:
+      url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='8' fill='none' stroke='rgba(46,174,114,0.04)' stroke-width='1'/%3E%3Ccircle cx='0' cy='0' r='8' fill='none' stroke='rgba(46,174,114,0.03)' stroke-width='1'/%3E%3C/svg%3E") repeat,
+      linear-gradient(180deg, var(--bg) 0%, rgba(20,42,31,0.15) 50%, var(--bg) 100%);
+    padding:20px 0;
+  }
+  .city-section-pe{
+    background:
+      url("data:image/svg+xml,%3Csvg width='80' height='20' viewBox='0 0 80 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 Q20 0 40 10 Q60 20 80 10' fill='none' stroke='rgba(58,158,194,0.04)' stroke-width='1.5'/%3E%3C/svg%3E") repeat,
+      linear-gradient(180deg, var(--bg) 0%, rgba(20,37,46,0.15) 50%, var(--bg) 100%);
+    padding:20px 0;
+  }
+
   .city-header{
     padding:48px 32px;border-radius:20px;margin-bottom:28px;color:white;position:relative;overflow:hidden;
   }
@@ -158,6 +208,20 @@
   .music-box p{font-size:0.88em;opacity:0.9}
   .music-box a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,169,110,0.4)}
 
+  /* WATCH LIST */
+  .watch-list{
+    background:linear-gradient(135deg,#1a0a1a,#2a1a2a);border-radius:14px;padding:20px 24px;
+    margin:16px 0;border:1px solid #3a2a3a;
+  }
+  .watch-list h4{color:#EC4899;font-family:'Cormorant Garamond',serif;font-size:1.15em;margin-bottom:8px}
+  .watch-list h4::before{content:'🎬 '}
+  .watch-list p{font-size:0.88em;opacity:0.9}
+  .watch-item{padding:8px 0;border-bottom:1px solid rgba(236,72,153,0.1)}
+  .watch-item:last-child{border-bottom:none}
+  .watch-title{font-weight:700;color:var(--text-bright)}
+  .watch-year{color:var(--muted);font-size:0.85em}
+  .watch-why{color:var(--text);font-size:0.85em;margin-top:2px}
+
   /* LOGISTICS */
   .logistics{background:var(--card);border-radius:20px;padding:40px;margin:40px 0;box-shadow:0 2px 16px rgba(0,0,0,0.2);border:1px solid var(--border)}
   .logistics h2{font-size:2em;margin-bottom:8px}
@@ -184,6 +248,16 @@
   .footer{text-align:center;padding:60px 24px 40px;color:var(--muted);font-size:0.82em}
   .footer .footer-title{font-family:'Cormorant Garamond',serif;font-size:2em;color:var(--text-bright);margin-bottom:4px}
 
+  /* NATTIE'S LIST CALLOUT */
+  .natties-list{
+    background:linear-gradient(135deg,#1a1a0a,#2a2a1a);border-radius:14px;padding:20px 24px;
+    margin:16px 0;border:1px solid rgba(201,169,110,0.3);
+  }
+  .natties-list h4{color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:1.15em;margin-bottom:8px}
+  .natties-list h4::before{content:'📍 '}
+  .natties-list p{font-size:0.88em;opacity:0.9}
+  .natties-list a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,169,110,0.4)}
+
   /* RESPONSIVE */
   @media(max-width:640px){
     .hero-content{padding:30px 20px}
@@ -202,6 +276,7 @@
     <div class="hero-eyebrow">A once-in-a-lifetime trip</div>
     <h1>Mexico 2026</h1>
     <p class="tagline">The 30th &amp; 40th Birthday Trip<br>5 friends &middot; 3 cities &middot; 15 days of magic</p>
+    <p class="crew-names">Nattie &middot; Honzi &middot; Kat &middot; Tashaun &middot; Casey</p>
     <div class="hero-dates">October 28 &mdash; November 11, 2026</div>
   </div>
   <div class="hero-scroll">Scroll to explore</div>
@@ -217,7 +292,7 @@
       <div>
         <div class="route-city">Mexico City</div>
         <div class="route-dates">Oct 28 (Wed) &mdash; Nov 3 (Tue) &middot; 6 nights</div>
-        <div class="route-highlight">40th Birthday &middot; Hot Air Balloon &middot; Teotihuac&aacute;n &middot; Lucha Libre &middot; Muertos Parade</div>
+        <div class="route-highlight">Kat&rsquo;s 40th Birthday &middot; Hot Air Balloon &middot; Teotihuac&aacute;n &middot; Lucha Libre &middot; Muertos Parade</div>
       </div>
     </div>
     <div class="route-item">
@@ -233,7 +308,7 @@
       <div>
         <div class="route-city">Puerto Escondido</div>
         <div class="route-dates">Nov 6 (Fri) &mdash; Nov 10 (Tue) &middot; 4 nights</div>
-        <div class="route-highlight">30th Birthday &middot; Beach &middot; Surf &middot; Bioluminescence &middot; Zip-lines &middot; Nightlife</div>
+        <div class="route-highlight">Tashaun&rsquo;s 30th Birthday &middot; Casa La Bomba &middot; Beach &middot; Surf &middot; Bioluminescence</div>
       </div>
     </div>
     <div class="route-item">
@@ -249,6 +324,60 @@
 
 <div class="container section-pad">
 
+<!-- ============ PRE-TRIP: WATCH LIST ============ -->
+<div class="watch-list">
+  <h4>Mandatory Pre-Trip Watch List</h4>
+  <p style="margin-bottom:12px;font-size:0.85em;color:var(--muted)">Watch these before you go. You&rsquo;ll understand everything differently once you&rsquo;re there.</p>
+  <div class="watch-item">
+    <span class="watch-title">Coco</span> <span class="watch-year">(2017)</span>
+    <div class="watch-why">Pixar&rsquo;s love letter to D&iacute;a de los Muertos. You will cry. You will understand the marigolds at Mixquic. Highest-grossing film in Mexican history.</div>
+  </div>
+  <div class="watch-item">
+    <span class="watch-title">Roma</span> <span class="watch-year">(2018)</span>
+    <div class="watch-why">Alfonso Cuar&oacute;n&rsquo;s masterpiece set in 1970s CDMX. Shot in the Roma neighbourhood you&rsquo;ll be staying in. Oscar winner.</div>
+  </div>
+  <div class="watch-item">
+    <span class="watch-title">Y Tu Mam&aacute; Tambi&eacute;n</span> <span class="watch-year">(2001)</span>
+    <div class="watch-why">Road trip through Oaxaca to a hidden beach. Captures Mexico&rsquo;s beauty and contradictions like nothing else. Gael Garc&iacute;a Bernal.</div>
+  </div>
+  <div class="watch-item">
+    <span class="watch-title">Amores Perros</span> <span class="watch-year">(2000)</span>
+    <div class="watch-why">Three stories connected by a car crash in CDMX. Gritty, beautiful, unforgettable. I&ntilde;&aacute;rritu&rsquo;s debut.</div>
+  </div>
+  <div class="watch-item">
+    <span class="watch-title">Frida</span> <span class="watch-year">(2002)</span>
+    <div class="watch-why">Salma Hayek IS Frida Kahlo. Much filmed at Casa Azul&mdash;the museum you&rsquo;ll visit on Day 2.</div>
+  </div>
+  <div class="watch-item">
+    <span class="watch-title">Nacho Libre</span> <span class="watch-year">(2006)</span>
+    <div class="watch-why">Filmed entirely in Oaxaca. Jack Black becomes a luchador. Watch this before Arena M&eacute;xico. &ldquo;Get that corn outta my face!&rdquo;</div>
+  </div>
+  <div class="watch-item">
+    <span class="watch-title">Anthony Bourdain: Parts Unknown</span> <span class="watch-year">S3E5 &amp; S9E1</span>
+    <div class="watch-why">Mexico City + Oaxaca episodes. Every Bourdain-approved spot labelled throughout this itinerary with a 🔪.</div>
+  </div>
+</div>
+
+<!-- ============ MUSIC GUIDE ============ -->
+<div class="music-box" style="margin-bottom:24px">
+  <h4>🎵 The Mexico 2026 Playlist Guide</h4>
+  <p style="margin-bottom:10px">Start listening NOW. These will be the sounds of the trip.</p>
+  <p><strong>Reggaeton &amp; Perreo:</strong> Bad Bunny, El Malilla, Kidd Voodoo, Feid, Rauw Alejandro, J Balvin, Peso Pluma</p>
+  <p><strong>Mexican Rap &amp; Hip Hop:</strong> Neton Vega, Fuerza Regida, Luis R Conriquez, C-Kan, Santa Fe Klan, Cartel de Santa</p>
+  <p><strong>Salsa &amp; Cumbia:</strong> Grupo Frontera, Los &Aacute;ngeles Azules, Celso Pi&ntilde;a, Oscar D&rsquo;Le&oacute;n, Celia Cruz, Sonora Santanera</p>
+  <p><strong>House &amp; Electronic:</strong> Rebolledo, Camilo Lara (Mexican Institute of Sound), Nortec Collective, Alucinante</p>
+  <p><strong>Underground &amp; Alt-Latin:</strong> Latin Mafia, Alanis Yuki, Chicano Batman, Caf&eacute; Tacvba, Natalia Lafourcade, Mon Laferte</p>
+  <p><strong>Regional Mexican &amp; Corridos:</strong> Tito Double P, Gabito Ballesteros, Junior H, Charly Gynn</p>
+  <p style="margin-top:10px"><strong>Spotify Playlists:</strong> <a href="https://open.spotify.com/playlist/3CwWEn8KjCrO62gNtByWxS">Top Mexican Music 2026</a> &middot; <a href="https://open.spotify.com/playlist/31OWMAJIdDRWeKbmQxNwqw">Chicano Rap Bangers</a> &middot; <a href="https://open.spotify.com/playlist/70Sn7e6N1PLEbDsaYiUTzC">Hot Hits Mexico</a></p>
+</div>
+
+<!-- ============ NATTIE'S LIST ============ -->
+<div class="natties-list">
+  <h4>Nattie&rsquo;s Google Maps Picks</h4>
+  <p>Nattie curated a Google Maps list with her personal picks across Mexico. Open it on your phone and save it&mdash;cross-reference as you go.</p>
+  <p><a href="https://maps.app.goo.gl/M9x5aeJdX3Cnz4t67">Open Nattie&rsquo;s Full Mexico List &rarr;</a></p>
+</div>
+
 <div class="fun-fact">
   <em>Mexico City has more museums than any other city on Earth (150+). It was built on the ruins of Tenochtitl&aacute;n, the Aztec island capital, and it&rsquo;s still sinking into the ancient lakebed at ~20 inches per year.</em>
 </div>
@@ -261,11 +390,19 @@
 <div class="container">
 
 <!-- ==================== MEXICO CITY ==================== -->
+<div class="city-section-cdmx">
+<div class="container">
 <div style="padding-top:48px">
   <div class="city-header cdmx">
     <span class="city-num">01</span>
     <h2>Mexico City</h2>
     <div class="city-sub">Oct 28 &mdash; Nov 3 &middot; 6 nights &middot; Roma Norte / Condesa</div>
+  </div>
+
+  <!-- 420 INFO FOR CDMX -->
+  <div class="four20-box">
+    <h4>420 Info &mdash; Mexico City</h4>
+    <p>Mexico&rsquo;s Supreme Court declared personal cannabis use a constitutional right in 2021. Possession under 28g is decriminalized. Commercial sales remain in a legal grey zone, but CDMX has tolerated &ldquo;Puntos 420&rdquo;&mdash;open-air consumption spots. The most well-known is at <strong>La Estela de Luz</strong> on Paseo de la Reforma near the entrance to Chapultepec Park, where vendors sell flower, pre-rolls, edibles, and concentrates. Prices: $10&ndash;100 MXN ($0.50&ndash;5 USD). Be chill, be discreet in public, don&rsquo;t carry large amounts, and never cross international borders with anything.</p>
   </div>
 
   <!-- DAY 1 -->
@@ -306,7 +443,8 @@
     <div class="time-block">
       <div class="time-label">Evening</div>
       <h4>Contramar + Jazz</h4>
-      <p><strong>Dinner:</strong> <a href="http://www.contramar.com.mx/">Contramar</a>&mdash;THE restaurant in CDMX. Famous tuna tostadas and the iconic half-red/half-green grilled fish. BOOK NOW. Alternatives: <a href="https://www.maximobistrot.com.mx/">M&aacute;ximo Bistro</a>, <a href="https://rosetta.com.mx/en">Rosetta</a>, <a href="https://guide.michelin.com/us/en/ciudad-de-mexico/cuauhtemoc_1995126/restaurant/carinito-tacos">Cari&ntilde;ito</a> (Asian fusion tacos), <a href="https://www.instagram.com/chozamx/">Choza</a> (Thai-Mexican).</p>
+      <p><strong>Dinner:</strong> <a href="http://www.contramar.com.mx/">Contramar</a>&mdash;THE restaurant in CDMX. Famous tuna tostadas and the iconic half-red/half-green grilled fish. BOOK NOW. Alternatives: <a href="https://www.maximobistrot.com.mx/">M&aacute;ximo Bistro</a><span class="bourdain-badge">Bourdain Pick</span>, <a href="https://rosetta.com.mx/en">Rosetta</a>, <a href="https://guide.michelin.com/us/en/ciudad-de-mexico/cuauhtemoc_1995126/restaurant/carinito-tacos">Cari&ntilde;ito</a> (Asian fusion tacos), <a href="https://www.instagram.com/chozamx/">Choza</a> (Thai-Mexican).</p>
+      <p><strong>New addition:</strong> <a href="https://www.masalaymaiz.com/">Masala y Ma&iacute;z</a> (Calle Marsella 72, Ju&aacute;rez)&mdash;Indian-Mexican fusion by chefs Norma Listman &amp; Saqib Keval. Michelin-starred. Samosas stuffed with suadero, masala-grilled prawns, chocolate tamal with orange. &ldquo;This is not fusion; this is Mestizaje.&rdquo; Book ahead.</p>
       <p><strong>After dinner:</strong> F&aacute;brica Jazz Club (confirm via Instagram). Backup: <a href="https://zincojazz.com/">Zinco Jazz Club</a> (Centro, underground speakeasy, ~$10&ndash;15 cover).</p>
       <p><strong>Nightcap:</strong> <a href="https://baltra.bar/">Baltra Bar</a> (creative cocktails) or <a href="https://www.instagram.com/cananeamx/">Cananea</a> (cantina, pool tables, DJs).</p>
     </div>
@@ -317,6 +455,21 @@
     <span class="cost-badge">~$90&ndash;130/person</span>
   </div>
 
+  <!-- BOURDAIN CDMX CRAWL -->
+  <div class="day-card" style="border-left-color:var(--gold)">
+    <h3>🔪 Anthony Bourdain&rsquo;s CDMX Trail</h3>
+    <div class="day-date">Spots visited on Parts Unknown (S3E5) &amp; No Reservations (S5E1) &mdash; weave these in throughout your week</div>
+    <div class="time-block">
+      <h4>The Spots Tony Loved</h4>
+      <p><strong><a href="https://www.maximobistrot.com.mx/">M&aacute;ximo Bistro</a></strong> (Roma)&mdash;Featured on Parts Unknown. Chef Eduardo Garc&iacute;a&rsquo;s French-Mexican magic. Abalone with chiles, confit suckling pig on tortilla.</p>
+      <p><strong>Fonda Margarita</strong> (working-class breakfast spot)&mdash;Staff starts cooking at 1am. Giant cazuelas of stews over charcoal. The real CDMX.</p>
+      <p><strong><a href="https://www.google.com/maps/search/?api=1&query=Tacos+El+Huequito+Mexico+City">Tacos El Huequito</a></strong> (Centro)&mdash;Bourdain-approved tacos al pastor since 1959.</p>
+      <p><strong><a href="https://www.google.com/maps/search/?api=1&query=Pulqueria+Las+Duelistas+Mexico+City">Pulquer&iacute;a Las Duelistas</a></strong> (Centro)&mdash;Pulque (fermented maguey sap) in flavours like guava and oatmeal. Ancient, funky, unforgettable.</p>
+      <p><strong><a href="https://www.google.com/maps/search/?api=1&query=Cantina+La+Mascota+Mexico+City">Cantina La Mascota</a></strong>&mdash;Tequila, carnitas, gorditas de chicharr&oacute;n. Old-school cantina magic.</p>
+      <p><strong><a href="https://limfruits.com/">Licorera Limantour</a></strong> (Roma)&mdash;World&rsquo;s #7 bar. Featured on Explore Parts Unknown. Perfect cocktails.</p>
+    </div>
+  </div>
+
   <!-- DAY 3 -->
   <div class="day-card music">
     <h3>Day 3 &mdash; Lucha Libre + Patrick Miller</h3>
@@ -324,8 +477,13 @@
     <div class="time-block">
       <div class="time-label">Late Morning</div>
       <h4>Brunch + Centro Hist&oacute;rico</h4>
-      <p>Brunch at <a href="https://niddo.menu-world.com/">Niddo</a> (chilaquiles) or <a href="https://maquecafe.shop/">Maque</a>. Then Uber to Centro: wander the <a href="https://mexicocity.cdmx.gob.mx/venues/plaza-de-la-constitucion-the-zocalo/?lang=en">Z&oacute;calo</a> (massive Muertos altars going up), admire <a href="https://palacio.inba.gob.mx/">Palacio de Bellas Artes</a> (Rivera murals inside worth 45 min). Street food at <a href="https://www.elminutito.com/en">El Minutito</a>.</p>
+      <p>Brunch at <a href="https://niddo.menu-world.com/">Niddo</a> (chilaquiles) or <a href="https://maquecafe.shop/">Maque</a>. Then Uber to Centro: wander the <a href="https://mexicocity.cdmx.gob.mx/venues/plaza-de-la-constitucion-the-zocalo/?lang=en">Z&oacute;calo</a> (massive Muertos altars going up), admire <a href="https://palacio.inba.gob.mx/">Palacio de Bellas Artes</a> (Rivera murals inside worth 45 min). Grab tacos at <a href="https://www.google.com/maps/search/?api=1&query=Tacos+El+Huequito+Mexico+City">Tacos El Huequito</a><span class="bourdain-badge">Bourdain Pick</span>.</p>
       <a href="https://www.google.com/maps/search/?api=1&query=Zocalo+Centro+Historico+Mexico+City" class="map-link" target="_blank">&#x1F4CD; Centro Hist&oacute;rico on map</a>
+    </div>
+    <div class="time-block">
+      <div class="time-label">Afternoon</div>
+      <h4>Pulque + Centro Vibes</h4>
+      <p>Hit <a href="https://www.google.com/maps/search/?api=1&query=Pulqueria+Las+Duelistas+Mexico+City">Pulquer&iacute;a Las Duelistas</a><span class="bourdain-badge">Bourdain Pick</span>&mdash;try guava or oatmeal pulque. Then wander through street food at <a href="https://www.elminutito.com/en">El Minutito</a>.</p>
     </div>
     <div class="time-block">
       <div class="time-label">Evening &mdash; 8:30 PM</div>
@@ -346,7 +504,7 @@
 
   <!-- DAY 4 — TEOTIHUACAN + BIRTHDAY -->
   <div class="day-card birthday adventure">
-    <h3>Day 4 &mdash; Hot Air Balloon + Teotihuac&aacute;n + The 40th Birthday</h3>
+    <h3>Day 4 &mdash; Hot Air Balloon + Teotihuac&aacute;n + Kat&rsquo;s 40th</h3>
     <div class="day-date">Saturday, October 31 &mdash; Halloween / D&iacute;a de los Muertos Eve</div>
     <div class="time-block">
       <div class="time-label">4:30 AM &mdash; Yes, 4:30 AM</div>
@@ -355,10 +513,13 @@
       <p><strong>Book with:</strong> <a href="https://volare.com.mx/en/home/">Volare</a> (est. 2005, most trusted) or <a href="https://flyingpictures.mx/en/">Flying Pictures Mexico</a> (British company, FAA-certified pilots). ~$165&ndash;180 USD/pp shared flight. Includes breakfast + champagne.</p>
       <a href="https://www.google.com/maps/search/?api=1&query=Teotihuacan+Hot+Air+Balloon" class="map-link" target="_blank">&#x1F4CD; Balloon launch site on map</a>
     </div>
+    <div class="tip-box">
+      <strong>🙋 Scared of heights?</strong> No stress. Skip the balloon and meet everyone at the pyramids. Book an <strong>early morning guided walking tour</strong> instead&mdash;an archaeologist takes you through the site as the gates open, before the crowds. Some tours include an obsidian workshop visit + mezcal and pulque tasting on the way back. Check <a href="https://www.viator.com/Mexico-City-tours/Historical-Guided-Walks/d628-g1-c53">Viator guided tours</a> (~$39 USD). Same pyramids, both feet on the ground, and you still get the sunrise light.
+    </div>
     <div class="time-block">
       <div class="time-label">Morning</div>
       <h4>Explore Teotihuac&aacute;n on Foot</h4>
-      <p>After landing, walk the ruins. Climb the <a href="https://www.google.com/maps/search/?api=1&query=Pyramid+of+the+Sun+Teotihuacan">Pyramid of the Sun</a> (3rd largest pyramid on Earth, 248 steps). Walk the Avenue of the Dead. Admire the Pyramid of the Moon. Allow 2&ndash;2.5 hours. Entry ~$5 USD. Back to CDMX by early afternoon.</p>
+      <p>After landing, walk the ruins. Walk the Avenue of the Dead. Admire the Pyramid of the Sun (3rd largest pyramid on Earth) and the Pyramid of the Moon. Allow 2&ndash;2.5 hours. Entry ~$5 USD. Back to CDMX by early afternoon.</p>
       <a href="https://www.google.com/maps/search/?api=1&query=Teotihuacan+Pyramids+Mexico" class="map-link" target="_blank">&#x1F4CD; Teotihuac&aacute;n on map</a>
     </div>
     <div class="fun-fact">
@@ -367,16 +528,28 @@
     <div class="time-block">
       <div class="time-label">Afternoon</div>
       <h4>Rest Up or Optional: El Bazar Sabado</h4>
-      <p>You&rsquo;ve been up since 4:30am&mdash;NAP. Or, if you&rsquo;re wired: <a href="https://www.elbazaarsabado.mx/">El Bazar Sabado</a> (San &Aacute;ngel, Saturdays only, 10am&ndash;5pm). Curated artisan market in a colonial courtyard since 1960. Ceramics, textiles, jewelry, folk art. Birthday crew: coordinate the cake.</p>
+      <p>You&rsquo;ve been up since 4:30am&mdash;NAP. Or, if you&rsquo;re wired: <a href="https://www.elbazaarsabado.mx/">El Bazar Sabado</a> (San &Aacute;ngel, Saturdays only, 10am&ndash;5pm). Curated artisan market in a colonial courtyard since 1960. Ceramics, textiles, jewelry, folk art. Birthday crew: coordinate the cake for Kat.</p>
     </div>
     <div class="time-block">
-      <div class="time-label">Evening &mdash; THE 40TH BIRTHDAY</div>
-      <h4>Milestone Dinner + Night Out</h4>
-      <p><strong>Dinner:</strong> <a href="https://www.maximobistrot.com.mx/">M&aacute;ximo Bistro</a> or <a href="https://rosetta.com.mx/en">Rosetta</a>. Tell them it&rsquo;s a 40th when you book. Splurge: <a href="https://pujol.com.mx/">Pujol</a> (world-ranked, book months ahead, ~$120&ndash;150/pp).</p>
-      <p><strong>The vibe:</strong> It&rsquo;s Halloween AND D&iacute;a de los Muertos Eve. The whole city is in skeleton face paint and costumes. Get painted at a street artist and hit the bars as beautiful skeletons. Birthday party meets once-in-a-lifetime cultural moment.</p>
-      <p><strong>After dinner:</strong> <a href="https://baltra.bar/">Baltra Bar</a> &rarr; Roma/Condesa Saturday night bar crawl &rarr; wherever the music takes you.</p>
+      <div class="time-label">Evening &mdash; KAT&rsquo;S 40TH BIRTHDAY 🎂</div>
+      <h4>Milestone Dinner + The Biggest Night Out</h4>
+      <p><strong>Dinner:</strong> <a href="https://www.maximobistrot.com.mx/">M&aacute;ximo Bistro</a><span class="bourdain-badge">Bourdain Pick</span> or <a href="https://rosetta.com.mx/en">Rosetta</a>. Tell them it&rsquo;s a 40th when you book. Splurge: <a href="https://pujol.com.mx/">Pujol</a> (world-ranked, book months ahead, ~$120&ndash;150/pp). Or go more casual with <a href="https://www.masalaymaiz.com/">Masala y Ma&iacute;z</a> for something truly unique.</p>
+      <p><strong>The vibe:</strong> It&rsquo;s Halloween AND D&iacute;a de los Muertos Eve. The whole city is in skeleton face paint and costumes. Get painted at a street artist and hit the bars as beautiful skeletons. Kat&rsquo;s birthday meets once-in-a-lifetime cultural moment.</p>
     </div>
-    <span class="cost-badge">~$280&ndash;350/person (balloon + food + birthday dinner)</span>
+    <div class="time-block">
+      <div class="time-label">Late Night &mdash; INJECT THE NIGHTLIFE 🔥</div>
+      <h4>The 40th Birthday Bar Crawl</h4>
+      <p>This is the big one. Saturday night + Halloween + D&iacute;a de los Muertos Eve + Kat&rsquo;s 40th. The whole city is out. Here&rsquo;s the move:</p>
+      <p><strong>Start:</strong> <a href="https://limfruits.com/">Licorera Limantour</a> (Roma)&mdash;World&rsquo;s #7 bar. Two perfect cocktails each. The one to open with.</p>
+      <p><strong>Next:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Handshake+Speakeasy+Mexico+City">Handshake Speakeasy</a> (Ju&aacute;rez)&mdash;World&rsquo;s #3 bar. Hidden entrance. You&rsquo;ll feel like you cracked the code.</p>
+      <p><strong>Dance:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Mama+Rumba+Mexico+City">Mama Rumba</a> (Roma)&mdash;THE salsa club. Live band, free lesson early, packed dance floor. Everyone dances together.</p>
+      <p><strong>Club:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Departamento+Club+Mexico+City">Departamento</a> (Roma)&mdash;Three floors of house/techno. The underground move for when the group wants to really go.</p>
+      <p><strong>Wild card:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Jardin+Juarez+Bar+Mexico+City">Jard&iacute;n Ju&aacute;rez</a>&mdash;open-air beer garden that turns into a nightclub. 50 peso beers, no cover if you arrive before 9:30.</p>
+      <p><strong>Alt-vibes:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Japan+Bar+Juarez+Mexico+City">Japan</a> (Ju&aacute;rez)&mdash;underground electronic, local &amp; international DJs. Or <a href="https://www.google.com/maps/search/?api=1&query=Xaman+Bar+Mexico+City">Xaman Bar</a> for bohemian ambient vibes.</p>
+      <p><strong>Budget option:</strong> Cottoritos (Roma)&mdash;20 peso beers, 3 floors, loud and cheap.</p>
+      <p><strong>End:</strong> Street tacos at 3am. There will be a taco cart. There is always a taco cart.</p>
+    </div>
+    <span class="cost-badge">~$280&ndash;400/person (balloon + food + birthday dinner + nightlife)</span>
   </div>
 
   <!-- DAY 5 — MUERTOS -->
@@ -417,8 +590,8 @@
     <div class="day-date">Monday, November 2</div>
     <div class="time-block">
       <div class="time-label">Morning</div>
-      <h4>Slow Start + Brunch</h4>
-      <p>After the intensity of Muertos: sleep in. Coffee at <a href="https://odette.com.mx/">Odette</a> or <a href="https://elenareygadas.com/en/">Panader&iacute;a Rosetta</a>. Z&oacute;calo altars and installations still on display if you missed anything.</p>
+      <h4>Slow Start + Bourdain Breakfast</h4>
+      <p>After the intensity of Muertos: sleep in. Coffee at <a href="https://odette.com.mx/">Odette</a> or <a href="https://elenareygadas.com/en/">Panader&iacute;a Rosetta</a>. For the adventurous: seek out <strong>Fonda Margarita</strong><span class="bourdain-badge">Bourdain Pick</span>&mdash;working-class breakfast spot where stews have been simmering since 1am over charcoal.</p>
     </div>
     <div class="time-block">
       <div class="time-label">Afternoon &mdash; XOCHIMILCO</div>
@@ -432,7 +605,7 @@
     <div class="time-block">
       <div class="time-label">Evening</div>
       <h4>Last CDMX Night</h4>
-      <p><strong>Dinner:</strong> Anywhere you missed&mdash;<a href="https://www.instagram.com/chozamx/">Choza</a> (Thai-Mexican), <a href="https://guide.michelin.com/us/en/ciudad-de-mexico/cuauhtemoc_1995126/restaurant/carinito-tacos">Cari&ntilde;ito</a>, or street tacos from your favourite taquero. <strong>Nightcap:</strong> <a href="https://www.instagram.com/cananeamx/">Cananea</a> or one last mezcal at <a href="https://baltra.bar/">Baltra</a>.</p>
+      <p><strong>Dinner:</strong> Anything you missed&mdash;<a href="https://www.instagram.com/chozamx/">Choza</a> (Thai-Mexican), <a href="https://guide.michelin.com/us/en/ciudad-de-mexico/cuauhtemoc_1995126/restaurant/carinito-tacos">Cari&ntilde;ito</a>, <a href="https://www.masalaymaiz.com/">Masala y Ma&iacute;z</a>, or street tacos from your favourite taquero. <a href="https://www.google.com/maps/search/?api=1&query=Cantina+La+Mascota+Mexico+City">Cantina La Mascota</a><span class="bourdain-badge">Bourdain Pick</span> for a proper cantina farewell. <strong>Nightcap:</strong> <a href="https://www.instagram.com/cananeamx/">Cananea</a> or one last mezcal at <a href="https://baltra.bar/">Baltra</a>.</p>
     </div>
     <span class="cost-badge">~$50&ndash;80/person</span>
   </div>
@@ -449,15 +622,17 @@
   </div>
 
 </div><!-- end CDMX section -->
+</div>
+</div><!-- end cdmx texture -->
 
 <!-- ============ PHOTO: OAXACA ============ -->
-</div>
 <div class="photo-strip" style="background:url('https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?w=1600&q=80') center/cover no-repeat, linear-gradient(135deg,#1B6B4A,#0e3d28)">
   <div class="photo-caption">Oaxaca City &mdash; Where mezcal flows and mole takes three days to prepare<span class="photo-credit">Mexico&rsquo;s culinary and spiritual heart</span></div>
 </div>
-<div class="container">
 
 <!-- ==================== OAXACA ==================== -->
+<div class="city-section-oaxaca">
+<div class="container">
 <div style="padding-top:48px">
   <div class="city-header oaxaca">
     <span class="city-num">02</span>
@@ -505,8 +680,8 @@
     </div>
     <div class="time-block">
       <div class="time-label">Evening</div>
-      <h4>Pasillo de Humo</h4>
-      <p><a href="https://www.google.com/maps/search/?api=1&query=Mercado+20+de+Noviembre+Oaxaca">Mercado 20 de Noviembre</a>&mdash;the Smoke Aisle. Grilled tasajo, cecina, chorizo over open flames. Communal tables, $5 feast. Go before 8pm.</p>
+      <h4>Pasillo de Humo<span class="bourdain-badge">Bourdain Pick</span></h4>
+      <p><a href="https://www.google.com/maps/search/?api=1&query=Mercado+20+de+Noviembre+Oaxaca">Mercado 20 de Noviembre</a>&mdash;the Smoke Aisle. Grilled tasajo, cecina, chorizo over open flames. Communal tables, $5 feast. Go before 8pm. Bourdain called it one of the best market experiences in Mexico.</p>
       <p><strong>Nightcap:</strong> <a href="https://www.lamezcalerita.com/">La Mezcalerita</a> or <a href="https://www.google.com/maps/search/?api=1&query=Txalaparta+Bar+Oaxaca">Txalaparta</a> (live music on the rooftop&mdash;jazz, salsa, DJs).</p>
     </div>
     <span class="cost-badge">~$40&ndash;60/person</span>
@@ -533,7 +708,7 @@
     <div class="time-block">
       <div class="time-label">Evening</div>
       <h4>Splurge Dinner + Music</h4>
-      <p><a href="https://criollo.mx/casa/">Criollo</a>&mdash;from the Pujol team. Oaxacan tasting menu, ~$60&ndash;80/pp. Book well ahead. Or: <a href="https://casaoaxacaelrestaurante.com/">Casa Oaxaca El Restaurante</a>&mdash;Chef Alejandro Ruiz&rsquo;s legendary mole negro.</p>
+      <p><a href="https://criollo.mx/casa/">Criollo</a>&mdash;from the Pujol team. Oaxacan tasting menu, ~$60&ndash;80/pp. Book well ahead. Or: <a href="https://casaoaxacaelrestaurante.com/">Casa Oaxaca El Restaurante</a>&mdash;Chef Alejandro Ruiz&rsquo;s legendary mole negro. For something casual: <strong>El Compadre</strong><span class="bourdain-badge">Bourdain Pick</span>&mdash;pozole and the best pork tacos Bourdain said he ever had.</p>
     </div>
     <div class="music-box">
       <h4>After Dinner: Oaxaca Music Circuit</h4>
@@ -565,29 +740,54 @@
   </div>
 
 </div><!-- end Oaxaca -->
+</div>
+</div><!-- end oaxaca texture -->
 
 <!-- ============ PHOTO: BEACH ============ -->
-</div>
 <div class="photo-strip" style="background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80') center/cover no-repeat, linear-gradient(135deg,#1A6B8A,#0c3a50)">
   <div class="photo-caption">Puerto Escondido &mdash; The Hidden Port<span class="photo-credit">Four nights of beach, surf, bioluminescence, and birthday magic</span></div>
 </div>
-<div class="container">
 
 <!-- ==================== PUERTO ESCONDIDO ==================== -->
+<div class="city-section-pe">
+<div class="container">
 <div style="padding-top:48px">
   <div class="city-header pe">
     <span class="city-num">03</span>
     <h2>Puerto Escondido</h2>
-    <div class="city-sub">Nov 6 &mdash; Nov 10 &middot; 4 nights &middot; Rinconada / La Punta</div>
+    <div class="city-sub">Nov 6 &mdash; Nov 10 &middot; 4 nights &middot; Ceiba / La Punta</div>
   </div>
 
+  <!-- ACCOMMODATION: CASA LA BOMBA -->
   <div class="day-card beach">
-    <h3>Where to Stay</h3>
-    <div class="day-date">Airbnb villa in Rinconada &mdash; pool, comfort, walkable to everything</div>
-    <div class="time-block">
-      <p><strong>Rinconada</strong> = slightly upscale, better infrastructure, pool villas. <strong>La Punta</strong> = backpacker surf vibe, barefoot sandy streets. For a group of 5 wanting comfort after a week of intensity, Rinconada wins. Budget: $100&ndash;150/night total ($20&ndash;30/pp/night).</p>
-      <a href="https://www.google.com/maps/search/?api=1&query=Rinconada+Puerto+Escondido+Oaxaca" class="map-link" target="_blank">&#x1F4CD; Rinconada on map</a>
+    <h3>Where to Stay: Casa La Bomba</h3>
+    <div class="day-date">BOOKED &mdash; Three-Bedroom Villa &middot; Nov 6&ndash;10 &middot; 4 nights</div>
+    <div class="accom-grid">
+      <div class="accom-item featured">
+        <div class="accom-name"><a href="https://www.luxuryserenitypuerto.com/casalabomba">Casa La Bomba</a></div>
+        <div class="accom-price">BOOKED &middot; 5 adults &middot; Three-Bedroom Villa</div>
+        <div class="accom-desc">Luxury villa atop La Punta with sweeping views. 3 bedrooms with en-suite bathrooms, saltwater pool, zen garden, Starlink WiFi, fully equipped kitchen. Recently remodeled architectural gem. Ceiba 71985, Puerto Escondido.</div>
+        <p style="font-size:0.82em;color:var(--muted);margin-top:8px">
+          <strong>Check-in:</strong> Fri Nov 6, 3:00 PM &middot; <strong>Check-out:</strong> Tue Nov 10, 11:00 AM<br>
+          <strong>Phone:</strong> +52 954 141 4561
+        </p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Casa+La+Bomba+Puerto+Escondido" class="map-link" target="_blank">&#x1F4CD; Casa La Bomba on map</a>
+      </div>
     </div>
+  </div>
+
+  <!-- SCOOTER RENTAL -->
+  <div class="scooter-box">
+    <h4>Scooter Rentals &mdash; Get Around PE on Two Wheels</h4>
+    <p>PE is a scooter town. Everyone has a licence, so rent scooters and explore freely. Best way to hit all the beaches, markets, and hidden spots.</p>
+    <p><strong><a href="https://rentscootersinpuertoescondido.com/">Rent Scooters PE</a></strong>&mdash;No hidden fees, straightforward rentals. <strong><a href="https://robertsecotours.com/tours/rental-scooter-pacific-puerto-escondido/">Robert&rsquo;s Ecotours</a></strong>&mdash;Scooter rentals + tours. $3,000 MXN deposit or passport hold. <strong><a href="https://brandxmototours.com/">Brand X Moto Tours</a></strong>&mdash;Scooters, dirt bikes, and surf shuttles.</p>
+    <p style="font-size:0.82em;color:var(--muted);margin-top:6px"><strong>Tip:</strong> Check your travel insurance covers scooter use. Helmets mandatory. No drinking and riding. Valid licence required.</p>
+  </div>
+
+  <!-- 420 INFO PE -->
+  <div class="four20-box">
+    <h4>420 Info &mdash; Puerto Escondido</h4>
+    <p>PE is very chill about cannabis. The surf/bohemian culture means it&rsquo;s widely tolerated, especially in La Punta. Same rules as CDMX: keep it under 28g, be discreet, don&rsquo;t be obnoxious about it. Enjoy responsibly on the villa terrace with that ocean view.</p>
   </div>
 
   <div class="fun-fact">
@@ -598,7 +798,7 @@
     <h3>PE Nightlife Schedule (Your Dates)</h3>
     <div class="day-date">November is high season &mdash; every night has something</div>
     <div class="time-block">
-      <p><strong>Fri Nov 6:</strong> <a href="https://www.instagram.com/mombasape/">Mombasa</a> &mdash; biggest party night (THE 30TH BIRTHDAY!)<br>
+      <p><strong>Fri Nov 6:</strong> <a href="https://www.instagram.com/mombasape/">Mombasa</a> &mdash; biggest party night (TASHAUN&rsquo;S 30TH BIRTHDAY! 🎂)<br>
       <strong>Sat Nov 7:</strong> Mar y Wana &mdash; perreo/reggaeton party (packed, quality DJs)<br>
       <strong>Sun Nov 8:</strong> Chill vibes, <a href="https://casababylon.mx/">Casa Babylon</a> live music (blues, rock, funk)<br>
       <strong>Mon Nov 9:</strong> Local bars, acoustic sets, sunset sessions<br>
@@ -608,7 +808,7 @@
 
   <!-- DAY 11 — ARRIVE + 30TH BIRTHDAY -->
   <div class="day-card birthday">
-    <h3>Day 11 &mdash; Arrive + The 30th Birthday</h3>
+    <h3>Day 11 &mdash; Arrive + Tashaun&rsquo;s 30th Birthday</h3>
     <div class="day-date">Friday, November 6 &mdash; THE BIRTHDAY</div>
     <div class="time-block">
       <div class="time-label">Getting Here</div>
@@ -617,15 +817,15 @@
     </div>
     <div class="time-block">
       <div class="time-label">Afternoon</div>
-      <h4>Beach + Birthday Vibes</h4>
-      <p>Drop bags at the villa. Head straight to <a href="https://www.google.com/maps/search/?api=1&query=Playa+Carrizalillo+Puerto+Escondido">Playa Carrizalillo</a>&mdash;best swimming beach in PE. Sheltered turquoise cove, 157 steps down. Rent a palapa, order beer and ceviche from beach vendors. This is the &ldquo;we made it to the beach&rdquo; moment.</p>
+      <h4>Casa La Bomba + Beach</h4>
+      <p>Check into <a href="https://www.luxuryserenitypuerto.com/casalabomba">Casa La Bomba</a> (3:00 PM). Unpack, admire the pool and views. Then head straight to <a href="https://www.google.com/maps/search/?api=1&query=Playa+Carrizalillo+Puerto+Escondido">Playa Carrizalillo</a>&mdash;best swimming beach in PE. Sheltered turquoise cove, 157 steps down. Rent a palapa, order beer and ceviche from beach vendors. This is the &ldquo;we made it to the beach&rdquo; moment.</p>
       <a href="https://www.google.com/maps/search/?api=1&query=Playa+Carrizalillo+Puerto+Escondido" class="map-link" target="_blank">&#x1F4CD; Carrizalillo on map</a>
     </div>
     <div class="time-block">
-      <div class="time-label">Evening &mdash; THE 30TH BIRTHDAY</div>
+      <div class="time-label">Evening &mdash; TASHAUN&rsquo;S 30TH 🎂</div>
       <h4>Almoraduz + Mombasa</h4>
-      <p><strong>Dinner:</strong> <a href="https://www.almoraduz.com.mx/en">Almoraduz</a>&mdash;&ldquo;mi fav y el mejor rankeado.&rdquo; Chef Quetzalc&oacute;atl Salinas, Michelin Guide featured. Book MONTHS ahead. ~$50&ndash;70/pp. Backup: <a href="https://www.espadinrestaurante.com/">Espad&iacute;n</a> (ocean view, book ahead).</p>
-      <p><strong>Party:</strong> <a href="https://www.instagram.com/mombasape/">Mombasa</a> (La Punta)&mdash;Friday is THE party night. Sandy floors, good DJs, locals + travellers. Arrive on the birthday, party on the biggest night. Perfect.</p>
+      <p><strong>Dinner:</strong> <a href="https://www.almoraduz.com.mx/en">Almoraduz</a>&mdash;Chef Quetzalc&oacute;atl Salinas, Michelin Guide featured. Book MONTHS ahead. ~$50&ndash;70/pp. Backup: <a href="https://www.espadinrestaurante.com/">Espad&iacute;n</a> (ocean view, book ahead).</p>
+      <p><strong>Party:</strong> <a href="https://www.instagram.com/mombasape/">Mombasa</a> (La Punta)&mdash;Friday is THE party night. Sandy floors, good DJs, locals + travellers. Arrive on the birthday, party on the biggest night. Perfect for Tashaun.</p>
       <a href="https://www.google.com/maps/search/?api=1&query=La+Punta+Puerto+Escondido" class="map-link" target="_blank">&#x1F4CD; La Punta on map</a>
     </div>
     <span class="cost-badge">~$130&ndash;180/person</span>
@@ -633,7 +833,7 @@
 
   <!-- DAY 12 — ADVENTURE -->
   <div class="day-card adventure">
-    <h3>Day 12 &mdash; Zip-line + Waterfall + Perreo Party</h3>
+    <h3>Day 12 &mdash; Adventure Day + Perreo Party</h3>
     <div class="day-date">Saturday, November 7</div>
     <div class="time-block">
       <div class="time-label">Morning</div>
@@ -641,10 +841,15 @@
       <p><a href="https://www.google.com/maps/search/?api=1&query=Dan's+Cafe+Puerto+Escondido">Dan&rsquo;s Caf&eacute;</a>&mdash;get there early, buy the banana bread before it sells out. Or <a href="https://www.shackslapunta.com/">Fish Shack</a>&mdash;&ldquo;pide los tacos de camar&oacute;n coco.&rdquo;</p>
     </div>
     <div class="time-block">
-      <div class="time-label">Afternoon &mdash; ADVENTURE TIME</div>
-      <h4>Zip-line + Waterfall Adventure</h4>
-      <p>Small-group jungle adventure: multiple zip-line courses through the canopy, jungle trail hiking, and waterfall swimming. ~$60&ndash;100/pp. Book via <a href="https://www.viator.com/tours/Puerto-Escondido/Zip-Line-Waterfall-and-Hiking-Adventure/d23875-31331P11">Viator</a> or <a href="https://www.projectexpedition.com/tour-activity/puerto-escondido/zipline-adventure-trails-and-waterfalls/35189/">Project Expedition</a>. Half-day trip, back by late afternoon.</p>
-      <p><strong>Alternative:</strong> Surf lesson at <a href="https://zicazteca.com/">Zicazteca</a> or <a href="https://bsurfer.com/">B Surfer</a> (~$30&ndash;50/pp), or kitesurfing at <a href="https://www.oaxakite.com/">Oaxakite</a>.</p>
+      <div class="time-label">Afternoon &mdash; CHOOSE YOUR ADVENTURE</div>
+      <h4>Option A: Zip-line + Waterfall</h4>
+      <p>Jungle zip-line courses through the canopy, trail hiking, waterfall swimming. ~$60&ndash;100/pp. Book via <a href="https://www.viator.com/tours/Puerto-Escondido/Zip-Line-Waterfall-and-Hiking-Adventure/d23875-31331P11">Viator</a> or <a href="https://www.projectexpedition.com/tour-activity/puerto-escondido/zipline-adventure-trails-and-waterfalls/35189/">Project Expedition</a>.</p>
+      <h4>Option B: Horseback Riding</h4>
+      <p>Ride through the jungle and along the beach at sunset. <a href="https://robertsecotours.com/tours/horseback-riding-hotspring/">Robert&rsquo;s Ecotours Hot Springs Ride</a>&mdash;horseback through Sierra Madre foothills to natural hot springs. ~$36&ndash;92 USD. Or a <strong>sunset beach ride</strong> (4&ndash;5 hours, rivers &rarr; jungle &rarr; beach &rarr; sunset).</p>
+      <h4>Option C: Surf Lesson</h4>
+      <p><a href="https://zicazteca.com/">Zicazteca</a> or <a href="https://bsurfer.com/">B Surfer</a> (~$30&ndash;50/pp), or kitesurfing at <a href="https://www.oaxakite.com/">Oaxakite</a>.</p>
+      <h4>Option D: Scooter Day Trip</h4>
+      <p>Rent scooters and cruise the coast. Hit hidden beaches, local food stalls, and the <a href="https://www.google.com/maps/search/?api=1&query=Mercado+Benito+Juarez+Puerto+Escondido">Mercado Benito Ju&aacute;rez</a> for fresh produce, local crafts, and street food. Explore Barra de Navidad or ride to <a href="https://www.google.com/maps/search/?api=1&query=San+Agustinillo+Oaxaca">San Agustinillo</a> and <a href="https://www.google.com/maps/search/?api=1&query=Mazunte+Oaxaca">Mazunte</a> (bohemian beach villages ~1 hour west).</p>
     </div>
     <div class="time-block">
       <div class="time-label">Evening</div>
@@ -653,6 +858,36 @@
       <p><strong>Party:</strong> <a href="https://traviswking.substack.com/p/puerto-escondidos-weekly-party-schedule">Mar y Wana</a>&mdash;Saturday = perreo. Reggaeton, Latin beats, packed, quality DJs.</p>
     </div>
     <span class="cost-badge">~$120&ndash;180/person</span>
+  </div>
+
+  <!-- PE DAY TRIPS + ACTIVITIES -->
+  <div class="day-card" style="border-left-color:#EC4899">
+    <h3>🎯 PE Activities Menu</h3>
+    <div class="day-date">Mix and match throughout your stay &mdash; over-suggest, pick what vibes</div>
+    <div class="time-block">
+      <h4>Mezcal &amp; Tequila</h4>
+      <p>Visit a <strong>sixth-generation mezcal distillery</strong> in the hills outside PE. Walk through the production process, taste 10+ different mezcals. Some tours combine mezcal with salsa dancing. Book through <a href="https://ecoadventurespuertoescondido.com/">EcoAdventures PE</a> or your villa concierge.</p>
+    </div>
+    <div class="time-block">
+      <h4>Markets &amp; Food</h4>
+      <p><a href="https://www.google.com/maps/search/?api=1&query=Mercado+Benito+Juarez+Puerto+Escondido">Mercado Benito Ju&aacute;rez</a>&mdash;the main market. Fresh seafood, produce, prepared food stalls, and local artisan goods. Go hungry. Also check out the smaller neighbourhood markets for the real local experience.</p>
+    </div>
+    <div class="time-block">
+      <h4>Scooter Coast Ride</h4>
+      <p>Rent scooters and ride west to <strong>Mazunte</strong> (hippie beach town, sea turtle sanctuary) and <strong>San Agustinillo</strong> (tiny cove, great snorkelling). ~1 hour ride through coastal mountains. Stop at roadside palapa restaurants for fresh fish and cold beer. Make a day of it.</p>
+    </div>
+    <div class="time-block">
+      <h4>Shopping &amp; Culture</h4>
+      <p>PE&rsquo;s La Punta and Zicatela neighbourhoods are full of independent boutiques, surf shops, and small galleries. Explore the bohemian streets&mdash;vintage finds, handmade jewelry, local art, and surf culture everywhere. Ask around for pop-up markets and art openings.</p>
+    </div>
+    <div class="time-block">
+      <h4>Dolphin &amp; Whale Watching</h4>
+      <p>Morning boat tour: pods of 1,000+ dolphins spotted regularly. ~$50&ndash;90/pp via <a href="https://puerto-boat-tour.com.mx/">Puerto Boat Tours</a>. November = early humpback whale season. Keep your eyes peeled.</p>
+    </div>
+    <div class="time-block">
+      <h4>Turtle Release</h4>
+      <p><a href="https://www.google.com/maps/search/?api=1&query=Playa+Bacocho+Puerto+Escondido">Playa Bacocho</a> at sunset&mdash;baby sea turtles released into the ocean. November is peak nesting season. Check locally for times.</p>
+    </div>
   </div>
 
   <!-- DAY 13 — BIOLUMINESCENCE -->
@@ -686,7 +921,9 @@
       <p>Morning dolphin watching + fishing trip. Pods of 1,000+ dolphins spotted regularly. ~$50&ndash;90/pp via <a href="https://puerto-boat-tour.com.mx/">Puerto Boat Tours</a> or <a href="https://sportfishingpuertoescondido.com/whales-and-dolphins-tours.html">Los Reyes</a>. Early departure, back by noon.</p>
       <h4>Option B: Chacahua Lagoon Day Trip</h4>
       <p>Remote mangrove lagoons, bird-watching, and an even more pristine bioluminescence lagoon. Full day trip. Like PE but with zero other tourists.</p>
-      <h4>Option C: Pure Beach Day</h4>
+      <h4>Option C: Scooter to Mazunte + San Agustinillo</h4>
+      <p>If you haven&rsquo;t done it yet: rent scooters and ride the coastal road west. Sea turtle museum in Mazunte, snorkelling in San Agustinillo, mezcal at a roadside palenque. The ultimate PE day trip.</p>
+      <h4>Option D: Pure Beach Day</h4>
       <p>You&rsquo;ve earned it. Carrizalillo, ceviche, repeat. Maybe a <a href="https://www.google.com/maps/search/?api=1&query=Playa+Bacocho+Puerto+Escondido">turtle release at Playa Bacocho</a> at sunset.</p>
     </div>
     <div class="time-block">
@@ -702,13 +939,16 @@
     <h3>Day 15 &mdash; Last Beach &rarr; Fly to CDMX</h3>
     <div class="day-date">Tuesday, November 10</div>
     <div class="time-block">
-      <p>Last coffee at <a href="https://www.instagram.com/cafeole.lapunta/">Caf&eacute; Ol&eacute;</a>. One more walk on the sand. Afternoon flight PXM &rarr; MEX (~1.5 hrs) via <a href="https://www.volaris.com/">Volaris</a>, <a href="https://www.vivaaerobus.com/">VivaAerobus</a>, or <a href="https://www.aeromexico.com/">Aeromexico</a>.</p>
+      <p>Check out of <a href="https://www.luxuryserenitypuerto.com/casalabomba">Casa La Bomba</a> by 11:00 AM. Last coffee at <a href="https://www.instagram.com/cafeole.lapunta/">Caf&eacute; Ol&eacute;</a>. One more walk on the sand. Afternoon flight PXM &rarr; MEX (~1.5 hrs) via <a href="https://www.volaris.com/">Volaris</a>, <a href="https://www.vivaaerobus.com/">VivaAerobus</a>, or <a href="https://www.aeromexico.com/">Aeromexico</a>.</p>
       <p><strong>Airport hotel:</strong> <a href="https://www.hilton.com/en/hotels/mexahhh-hilton-mexico-city-airport/">Hilton MEX Airport</a> (T1 skybridge) or <a href="https://www.nh-hotels.com/en/hotel/nh-collection-mexico-city-airport-t2">NH Collection</a> (T2). $40&ndash;130/night.</p>
     </div>
   </div>
 
 </div><!-- end PE -->
+</div>
+</div><!-- end pe texture -->
 
+<div class="container">
 <!-- ==================== RETURN ==================== -->
 <div style="padding-top:20px">
   <div class="city-header return">
@@ -757,10 +997,26 @@
     <li><strong>Travel insurance:</strong> GET IT. <a href="https://www.worldnomads.com/">World Nomads</a> or <a href="https://www.allianztravelinsurance.com/">Allianz</a>. ~$50&ndash;100 CAD for 15 days.</li>
   </ul>
 
+  <h3>420 Ground Rules</h3>
+  <ul>
+    <li>Personal possession under 28g decriminalized since 2021 (Supreme Court ruling)</li>
+    <li>Grey market&mdash;no licensed dispensaries yet. CDMX has tolerated &ldquo;Puntos 420&rdquo; zones</li>
+    <li>Chill at the villa, be discreet in public, never carry large amounts</li>
+    <li><strong>NEVER</strong> cross international borders with anything. Not even edibles. Not even residue.</li>
+    <li>PE is very relaxed but still technically grey. Villa terrace = perfect spot</li>
+  </ul>
+
+  <h3>Scooters &amp; Getting Around</h3>
+  <ul>
+    <li><strong>CDMX:</strong> Uber/DiDi everywhere. Metro is excellent but crowded. No scooter needed.</li>
+    <li><strong>Oaxaca:</strong> Walkable. Taxis cheap. Uber available.</li>
+    <li><strong>PE:</strong> Scooter territory. Rent from <a href="https://rentscootersinpuertoescondido.com/">Rent Scooters PE</a>, <a href="https://robertsecotours.com/tours/rental-scooter-pacific-puerto-escondido/">Robert&rsquo;s Ecotours</a>, or <a href="https://brandxmototours.com/">Brand X Moto</a>. Valid driver&rsquo;s licence required. Helmets mandatory.</li>
+  </ul>
+
   <h3>Communication</h3>
   <ul>
     <li><strong>eSIM:</strong> <a href="https://www.airalo.com/">Airalo</a> or <a href="https://esim.holafly.com/">Holafly</a>&mdash;~$20&ndash;30 USD for 15 days. Set up at YVR.</li>
-    <li><strong>WhatsApp</strong> is everything in Mexico. Create the crew group chat.</li>
+    <li><strong>WhatsApp</strong> is everything in Mexico. Create the crew group chat. Nattie, Honzi, Kat, Tashaun, Casey&mdash;everyone in.</li>
   </ul>
 
   <h3>Water &amp; Health</h3>
@@ -787,14 +1043,15 @@
   <p style="font-size:0.88em;color:var(--muted);margin-bottom:16px">Per person, excluding international flights. All prices USD.</p>
   <table class="budget-table">
     <tr><th>Segment</th><th>Low</th><th>High</th></tr>
-    <tr><td>Mexico City (6 nights, incl. balloon)</td><td>$600</td><td>$950</td></tr>
+    <tr><td>Mexico City (6 nights, incl. balloon + birthday)</td><td>$600</td><td>$1,000</td></tr>
     <tr><td>Oaxaca (3 nights, Casa 821)</td><td>$350</td><td>$550</td></tr>
-    <tr><td>Puerto Escondido (4 nights, incl. adventures)</td><td>$400</td><td>$650</td></tr>
+    <tr><td>Puerto Escondido (4 nights, Casa La Bomba + adventures)</td><td>$400</td><td>$700</td></tr>
     <tr><td>Internal flights &times;3 + PE&rarr;CDMX return</td><td>$250</td><td>$450</td></tr>
     <tr><td>CDMX airport hotel (1 night)</td><td>$40</td><td>$130</td></tr>
-    <tr><td><strong>TOTAL PER PERSON</strong></td><td><strong>~$1,640</strong></td><td><strong>~$2,730</strong></td></tr>
+    <tr><td>Scooter rentals (PE, ~3 days)</td><td>$30</td><td>$60</td></tr>
+    <tr><td><strong>TOTAL PER PERSON</strong></td><td><strong>~$1,670</strong></td><td><strong>~$2,890</strong></td></tr>
   </table>
-  <p style="font-size:0.82em;color:var(--muted);margin-top:8px">Within the $1,500&ndash;2,500 budget range. The balloon + adventures push the high end slightly above. Room for shopping and spontaneous mezcal.</p>
+  <p style="font-size:0.82em;color:var(--muted);margin-top:8px">Within striking distance of the $1,500&ndash;2,500 budget. The balloon + birthday nightlife + scooters push the high end slightly above. Room for shopping and spontaneous mezcal.</p>
 </div>
 
 <!-- ==================== CHECKLIST ==================== -->
@@ -804,20 +1061,23 @@
     <li><strong>International flights</strong>&mdash;YVR &rarr; MEX (Oct 28) / MEX &rarr; YVR (Nov 11)</li>
     <li><strong>Hot air balloon</strong>&mdash;<a href="https://volare.com.mx/en/home/">Volare</a> or <a href="https://flyingpictures.mx/en/">Flying Pictures</a> (Oct 31 sunrise)</li>
     <li><strong>Casa 821 Guest House</strong>&mdash;<a href="https://casa821.com/">casa821.com</a> (Nov 3&ndash;6)</li>
+    <li><strong>Casa La Bomba</strong>&mdash;<a href="https://www.luxuryserenitypuerto.com/casalabomba">Booked!</a> (Nov 6&ndash;10)</li>
     <li><strong>Frida Kahlo Museum</strong>&mdash;<a href="https://boletos.museofridakahlo.org.mx/en/tickets/museo-frida-kahlo-cdmx">Book here</a></li>
     <li><strong>Contramar</strong>&mdash;<a href="http://www.contramar.com.mx/">contramar.com.mx</a></li>
-    <li><strong>Almoraduz</strong> (30th birthday dinner)&mdash;<a href="https://www.almoraduz.com.mx/en">almoraduz.com.mx</a></li>
+    <li><strong>Masala y Ma&iacute;z</strong>&mdash;<a href="https://www.masalaymaiz.com/">masalaymaiz.com</a></li>
+    <li><strong>Almoraduz</strong> (Tashaun&rsquo;s 30th dinner)&mdash;<a href="https://www.almoraduz.com.mx/en">almoraduz.com.mx</a></li>
     <li><strong>Criollo</strong> (Oaxaca)&mdash;<a href="https://criollo.mx/casa/">criollo.mx</a></li>
     <li><strong>Mezcaloteca</strong>&mdash;<a href="https://mezcaloteca.com/en">mezcaloteca.com</a></li>
     <li><strong>Internal flights</strong>&mdash;<a href="https://www.volaris.com/">Volaris</a> / <a href="https://www.vivaaerobus.com/">VivaAerobus</a></li>
     <li><strong>Lucha Libre tickets</strong>&mdash;<a href="https://www.ticketmaster.com.mx/arena-mexico-tickets-mexico/venue/164115">Ticketmaster MX</a></li>
     <li><strong>Bioluminescence tour</strong>&mdash;<a href="https://robertsecotours.com/tours/bioluminescent-lagoon/">Robert&rsquo;s Ecotours</a></li>
+    <li><strong>Watch Coco + Roma + Y Tu Mam&aacute; Tambi&eacute;n</strong>&mdash;Movie night at someone&rsquo;s place before the trip</li>
   </ul>
 </div>
 
 <div class="footer">
   <div class="footer-title">Mexico 2026</div>
-  <p style="font-family:'Cormorant Garamond',serif;font-size:1.2em;font-style:italic;color:var(--gold-dark);margin-bottom:16px">The Birthday Trip</p>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:1.2em;font-style:italic;color:var(--gold-dark);margin-bottom:16px">Nattie &middot; Honzi &middot; Kat &middot; Tashaun &middot; Casey</p>
   <p>Planned with love. Now go book those flights.</p>
 </div>
 
